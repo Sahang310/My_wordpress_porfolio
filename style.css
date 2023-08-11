@@ -1,43 +1,44 @@
-body {
+*{
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #ff0000;
+    background-color: #81998e;
+    box-sizing: border-box;
 }
-
+.raw{
+    width: 100%;
+    max-width: 1340px;
+    margin: 0 auto;
+}
 .gallery {
-    margin: 0;
-    padding: 0;
-    width: 80vw;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: grid;
-    grid-template-columns: repeat(auto-fill, var(--card_width));
-    grid-auto-rows: var(--row_increment);
-    justify-content: center;
-    background-color: black;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .item {
     position: relative;
     overflow: hidden;
-    grid-column-end: span 2;
-    /* Adjust as needed for wider items */
-    grid-row-end: span 2;
-    /* Adjust as needed for taller items */
+    /* height: 300px; */
+    /* width: 400px; */
+    width: 100%;
+
+    border-radius: 8px;
+    flex: 1 0 calc(33.33% - 20px);
+    margin : 8px;
+    /* width: 30%; */
 }
 
 .item img {
     max-width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
-    width: 100%;
-    height: auto;
+    transition: transform 0.5s ease;
 }
 
-/* .item:hover img {
+.item:hover img {
     transform: scale(1.1);
-} */
+    overlay
+}
 
 /* Optional: Add more styling as needed, like captions or overlays */
